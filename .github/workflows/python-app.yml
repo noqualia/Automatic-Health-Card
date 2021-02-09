@@ -28,10 +28,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests
-        pip install beautifulsoup4
-        pip install lxml
-        wget https://raw.githubusercontent.com/zsqw123/cdn/master/prj/autoHealth/actions.py
+        pip install selenium
+        wget https://raw.githubusercontent.com/zsqw123/cdn/master/prj/autoHealth/suesTemp.py
     - name: Run
       run: |
-        python actions.py ${{ secrets.NUM }} ${{ secrets.PWD }}
+        python suesTemp.py ${{ secrets.NUM }} ${{ secrets.PWD }}
